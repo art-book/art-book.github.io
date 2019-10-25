@@ -4,8 +4,20 @@ $(document).ready(main);
 function main() {
 	
 	const $time = $("#current-time");
-	
-	let headMessage = "现在是" + moment().format("YYYY年MM月DD日hh点，a好。 ");
+		
+		
+	const date = new Date();
+	let options = {
+		// 如果省略某一项（如年份），那么格式化后的字符串不会包含年份
+		weekday: "long", // 工作日的呈现方式（长名称）
+		year: "numeric", // 年份的呈现方式（数字）
+		month: "long",   // 月份的呈现方式（长名称）
+		day: "numeric",   // 天的呈现方式（2位数字）
+		hour: "numeric"
+	};
+
+	let dateMessage = new Intl.DateTimeFormat("zh-cn", options).format(date)); 
+	let headMessage = "现在是" + dateMessage;
 	
 	let showMessage = () => headMessage;
 	
@@ -62,8 +74,9 @@ function main() {
 		}
 	} else {
 		headMessage += "又见面了，" + Cookies.get("name") + "。";
+		let dtf = new Intl.DateTimeFormat("zh-cn");
 		editor.setOption("value", (() => 
-			`/*\n* 作者：${Cookies.get("name")}\n* 日期：${moment().format("YYYY-MM-DD")}\n*/\n\n`)());
+			`/*\n* 作者：${Cookies.get("name")}\n* 日期：${dtf.format(new Date())}\n*/\n\n`)());
 	}
 	
 	$time.text(showMessage());

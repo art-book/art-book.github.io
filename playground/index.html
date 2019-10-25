@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://javascript.cs.lmu.edu/playground/ -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="https://javascript.cs.lmu.edu/css/playground.css">
+    <title>JavaScript DHTML Playground</title>
+        
+    <!-- Make sure that jQuery is "built-in." -->
+    <script type="text/javascript" src="./index_files/jquery-1.4.2.min.js.下载"></script>
+    <script type="text/javascript">
+      $(function() {
+        $("#runButton").click(function() {
+          try {
+            eval($("#scriptArea").val());
+          } catch(e) {
+            alert(e.description || e);
+          }
+        });
+      });
+    </script>
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="./index_files/translateelement.css"></head>
+
+  <body>
+    <h1 id="header">JavaScript DHTML Playground</h1>
+
+    <p id="introduction">This page contains web elements for practicing event
+    handling.  View the HTML source of this page to see the IDs that have been
+    assigned to each element.</p>
+
+    <p id="instructions">As before, type your script into the text area,
+    then click the Run button to try it. You’ll want some form of
+    JavaScript debugging tool (such as Firebug for <a class="external" href="http://www.mozilla.com/">Firefox</a> or the Developer menu in <a class="external" href="http://www.google.com/chrome">Chrome</a>)
+    to see if there were problems with your script.</p>
+
+    <div id="widgets">
+      <p id="row1">
+        <label for="input1" id="input1Label">Input 1</label>:
+        <input id="input1" type="text">
+        <label for="input2" id="input2Label">Input 2</label>:
+        <input id="input2" type="text">
+        <input id="check" type="checkbox">
+        <label for="check" id="checkLabel">Check me</label>
+      </p>
+      <p id="row2">
+        <input id="radio1" type="radio" name="radioGroup" value="eenie">
+        <label for="radio1" id="eenieLabel">Eenie</label>&nbsp;
+        <input id="radio2" type="radio" name="radioGroup" value="meenie">
+        <label for="radio2" id="meenieLabel">Meenie</label>&nbsp;
+        <input id="radio3" type="radio" name="radioGroup" value="mynie">
+        <label for="radio3" id="mynieLabel">Mynie</label>&nbsp;
+        <input id="radio4" type="radio" name="radioGroup" value="moe">
+        <label for="radio4" id="moeLabel">Moe</label>
+        <label for="password" id="passwordLabel">Password:</label>
+        <input id="password" type="password">
+      </p>
+      <p id="row3">
+        <label for="category" id="comboLabel">Category:</label>
+        <select id="category">
+          <option selected="selected" value="a">animal</option>
+          <option value="v">vegetable</option>
+          <option value="m">mineral</option>
+        </select>
+        <label for="wonder" id="wonderLabel">Wonder:</label>
+        <select id="wonder" size="5">
+          <option id="pyramidOption" value="pyramid">Great Pyramid of Giza</option>
+          <option id="gardensOption" value="gardens">Hanging Gardens of Babylon</option>
+          <option id="statueOption" value="statue">Statue of Zeus at Olympia</option>
+          <option id="templeOption" value="temple">Temple of Artemis at Ephesus</option>
+          <option id="mausoleumOption" value="mausoleum">Mausoleum of Maussollos at Halicarnassus</option>
+          <option id="colossusOption" value="colossus">Colossus of Rhodes</option>
+          <option id="lighthouseOption" value="lighthouse">Lighthouse of Alexandria</option>
+        </select>
+      </p>
+      <div id="status">
+        All systems are go.
+      </div>
+      <p><textarea id="scriptArea" cols="80" rows="25"></textarea></p>
+      <p><input type="button" value="Run" id="runButton">
+         <input type="reset" value="Clear All Components" id="clearButton">
+      </p>
+    </div>
+        
+  
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
