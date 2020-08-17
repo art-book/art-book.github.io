@@ -109,27 +109,4 @@ function main() {
 	runButton.addEventListener("click", toRun, false);
 	runButton.addEventListener("touchend", toRun, false);
 
-    const $cursorBlinkRate = $("#cursor-blink-rate");
-    $cursorBlinkRate.on("change", () => {
-        editor.setOption("cursorBlinkRate", +cursorBlinkRate.value);
-    });
-	
-
-    const $lineWrapping = $("line-wrapping");
-    $("[name='lineWrapping']").on("input",
-        (e) => {
-            let value = $(e.target).attr("checked");
-            alert(value);
-            editor.setOption("lineWrapping", value);
-        });
-	
-	
-    $("[name='indent-account']").on("change",
-        (e) => {
-            let value = $(e.target).attr("checked");
-            alert(value);
-            editor.setOption("indent-account", value);
-        });
-	
-	//getRadioValue("indent-account");
 }
