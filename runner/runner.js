@@ -17,7 +17,7 @@ function main() {
 	};
 
 	let dateMessage = new Intl.DateTimeFormat("zh-cn", options).format(date); 
-	let headMessage = "现在是" + dateMessage;
+	let headMessage = "现在是" + dateMessage + "。";
 	
 	let showMessage = () => headMessage;
 	
